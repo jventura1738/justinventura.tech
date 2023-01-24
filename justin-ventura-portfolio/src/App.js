@@ -4,7 +4,8 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Justin Ventura Portfolio 2</p>
+        <p>Justin Ventura Portfolio</p>
+        <p>Hi</p>
       </header>
     </div>
   );
