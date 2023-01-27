@@ -1,5 +1,5 @@
 // React:
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -44,7 +44,21 @@ export const AiIconDynamic = ({ type }) => {
 };
 
 function Header() {
-  const [showMenu, setShowMenu] = React.useState(false);
+  // These will be used for the burger boi menu:
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuRef, setIsOpen]);
+
   return (
     <div className="text-white">
       <div className="flex bg-theme items-center justify-between shadow-lg px-10">
@@ -55,11 +69,11 @@ function Header() {
             alt="JV"
           />
         </a>
-        <div className="md:flex lg:hidden xl:hidden 2xl:hidden">
-          {/* <button
+        <div ref={menuRef} className="md:flex lg:hidden xl:hidden 2xl:hidden">
+          <button
             type="button"
             onClick={() => {
-              setShowMenu(!showMenu);
+              setIsOpen(!isOpen);
             }}
             className="relative group inline-flex items-center justify-center"
           >
@@ -75,7 +89,7 @@ function Header() {
                 </div>
               </div>
             </div>
-          </button> */}
+          </button>
         </div>
         <div className="sm:hidden md:hidden lg:flex xl:flex 2xl:flex md:gap-x-12">
           {socials.map((social) => (
@@ -86,33 +100,22 @@ function Header() {
             </li>
           ))}
         </div>
-        {showMenu && (
-          <div className="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg top-20">
-            <div className="flex flex-col items-center justify-center">
-              {socials.map((social) => (
-                <li className="list-none ">
-                  <a href={social.link} target="_blank">
-                    <AiIconDynamic type={social.name} />
-                  </a>
-                </li>
-              ))}
+        {
+          // This is what causes the menu to pop up after clicking the burger.
+          isOpen && (
+            <div className="absolute right-0 mt-2 mr-6 w-20 bg-black rounded-md shadow-lg top-20">
+              <div className="flex flex-col items-center justify-center">
+                {socials.map((social) => (
+                  <li className="list-none ">
+                    <a href={social.link} target="_blank">
+                      <AiIconDynamic type={social.name} />
+                    </a>
+                  </li>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-        {/* <div className="md:flex flex-col hidden lg xl 2xl">
-          <li className="list-none mx-5">
-            <a href="/">
-              <AiFillHome />
-            </a>
-          </li>
-          {socials.map((social) => (
-            <li className="list-none mx-5">
-              <a href={social.link} target="_blank">
-                <AiIconDynamic type={social.name} />
-              </a>
-            </li>
-          ))}
-        </div> */}
+          )
+        }
       </div>
     </div>
   );
