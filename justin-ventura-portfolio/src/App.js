@@ -26,13 +26,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-
-    // <div className="App">
-    //   <header className="App-header">
-    //     <p>Justin Ventura Portfolio</p>
-    //     <p>Hi</p>
-    //   </header>
-    // </div>
   );
 }
 
