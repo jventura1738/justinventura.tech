@@ -14,9 +14,9 @@ I will probably leave this part in after I am finished just for future reference
 ### Requirements:
 - The Landing Page.
   - This will likely be what goes on my resume.
-  - Perhaps the domain would be something along the lines of "justinventura.tech"?  If I can get that domain.
+  - Perhaps the domain would be something along the lines of "justinventura.tech"?  ~If I can get that domain.~ Got it :)
   - I will have a universal nav bar which will be more of a banner.
-  - The landing page will have the text "I am..." then 4 buttons:
+  - The landing page will ~have the text "I am..." then~ 4 buttons:
     1. ["Looking to hire Justin"](#curriculum-vitae) *Company Logos*
     2. ["Interested in Justin's music"](#zoom-music) *Apple Music Logo?*
     3. ["A student at Salisbury University"](#salisbury-university) *SU Logo*
@@ -24,7 +24,7 @@ I will probably leave this part in after I am finished just for future reference
 - General Style:
   - Header:
     - Top left: `justin-ventura.py`
-    - Follows as you scroll?  Maybe.
+    - Follows as you scroll?  ~Maybe.~ *Yes, used React Sticky Nav*
   - Main colors: black, purple, orange, white.
   - Background should be black (or white, if I can figure out to change themes).
   - Footer:
