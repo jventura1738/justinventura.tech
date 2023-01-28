@@ -23,15 +23,11 @@ const About = () => {
             </p>
           </div>
           <div className="col-span-1 grid grid-cols-2 mx-6">
-            <div className="col-span-2 text-center">
-              <p className="text-2xl mb-4">
-                Interested in anything particular?
-              </p>
-            </div>
+            <div className="col-span-2 text-center"></div>
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  "Justin's Skills/Experience."
+                  Justin's Skills/Experience.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                   View Skills
@@ -41,7 +37,7 @@ const About = () => {
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  "Justin's Music/Playlists."
+                  Justin's Music/Playlists.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                   Browse Music
@@ -51,7 +47,7 @@ const About = () => {
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  "Justin's Teaching Resources."
+                  Justin's Teaching/School Resources.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                   Study Resources
@@ -61,7 +57,7 @@ const About = () => {
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  "Justin's COC Clan: KinetiKZ."
+                  Justin's COC Clan: KinetiKZ.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                   Join KinetiKZ
