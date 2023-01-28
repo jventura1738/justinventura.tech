@@ -2,9 +2,9 @@ import React from "react";
 
 import Typer from "../Typewriter";
 
-const About = () => {
+function About() {
   return (
-    <div className="h-screen text-white">
+    <div className="text-white">
       <div className="grid grid-cols-2 md:grid-cols-1">
         <div>
           <lottie-player
@@ -15,7 +15,7 @@ const About = () => {
             autoplay
           ></lottie-player>
         </div>
-        <div className="grid grid-cols-1">
+        <div className="grid grid-cols-1 bg-theme/50 rounded-lg">
           <div className="col-span-1 text-center mx-6 mb-6">
             <h1 className="text-6xl m-6">Welcome to my Portfolio.</h1>
             <p className="text-2xl">
@@ -27,7 +27,7 @@ const About = () => {
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  Justin's Skills/Experience.
+                  Justin's Skills & Experience.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                   View Skills
@@ -37,7 +37,7 @@ const About = () => {
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  Justin's Music/Playlists.
+                  Justin's Music & Playlists.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                   Browse Music
@@ -47,10 +47,10 @@ const About = () => {
             <div className="col-span-1">
               <div className="grid grid-rows-2 mx-4">
                 <p className="text-center lg:hidden">
-                  Justin's Teaching/School Resources.
+                  Justin's Teaching Resources.
                 </p>
                 <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
-                  Study Resources
+                  Get Tutoring
                 </button>
               </div>
             </div>
@@ -69,6 +69,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+}
 
 export default About;
