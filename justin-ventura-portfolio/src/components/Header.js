@@ -40,7 +40,7 @@ const socials = [
 export const AiIconDynamic = ({ type }) => {
   const AiIcon = iconComponents[type];
   return (
-    <AiIcon className="h-8 w-8 hover:text-purple-400 shadow-lg hover:-translate-y-1"></AiIcon>
+    <AiIcon className="h-9 w-9 hover:text-purple-400 shadow-lg hover:-translate-y-1 duration-300"></AiIcon>
   );
 };
 
@@ -61,15 +61,13 @@ function Header() {
   }, [menuRef, setIsOpen]);
 
   return (
-    <StickyNav>
+    <StickyNav className="overflow-visible z-10">
       <nav className="text-white">
-        <div className="flex bg-theme items-center justify-between shadow-lg px-10">
+        <div className="flex bg-theme/50 items-center justify-between shadow-purple-600/25 shadow-xl px-10 py-6">
           <a href="/">
-            <img
-              className="h-24 .max-w-full .h-auto"
-              src={require("../assets/logo.png")}
-              alt="JV"
-            />
+            <h1 className="text-2xl hover:text-purple-400 duration-300">
+              Justin Ventura
+            </h1>
           </a>
           <div ref={menuRef} className="md:flex lg:hidden xl:hidden 2xl:hidden">
             <button
@@ -79,7 +77,7 @@ function Header() {
               }}
               className="relative group inline-flex items-center justify-center"
             >
-              <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-black ring-0 ring-purple-400 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+              <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-black/50 ring-0 ring-purple-400 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
                 <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
                   <div
                     className={` ${
@@ -116,7 +114,7 @@ function Header() {
           </div>
           <div className="sm:hidden md:hidden lg:flex xl:flex 2xl:flex md:gap-x-12">
             {socials.map((social) => (
-              <li className="list-none mx-5">
+              <li key={social.name} className="list-none mx-5">
                 <a href={social.link} target="_blank">
                   <AiIconDynamic type={social.name} />
                 </a>
@@ -126,10 +124,10 @@ function Header() {
           {
             // This is what causes the menu to pop up after clicking the burger.
             isOpen && (
-              <div className="absolute right-0 mt-2 mr-6 w-20 bg-black rounded-md shadow-lg top-20">
+              <div className="absolute right-0 mt-2 mr-6 w-20 bg-black/50 rounded-md shadow-lg top-20">
                 <div className="flex flex-col items-center justify-center">
                   {socials.map((social) => (
-                    <li className="list-none ">
+                    <li key={social.link} className="list-none py-3">
                       <a href={social.link} target="_blank">
                         <AiIconDynamic type={social.name} />
                       </a>
