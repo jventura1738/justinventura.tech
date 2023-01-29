@@ -7,7 +7,7 @@ import googleTransparent from "../../assets/orgLogos/googleTransparent.png";
 import metaTransparent from "../../assets/orgLogos/metaTransparent.png";
 import umdTransparent from "../../assets/orgLogos/umdTransparent.png";
 
-function Bio() {
+function Bio({ emphasis }) {
   return (
     <div className="text-white">
       <div className="grid grid-cols-1">
@@ -21,18 +21,18 @@ function Bio() {
           <div className="flex col-span-2 justify-center items-center m-6">
             <p className="text-xl text-center">
               I am a recent
-              <strong className="text-orange-600">
+              <strong className={`${emphasis}`}>
                 {" "}
                 computer science & mathematics{" "}
               </strong>
               double graduate with a passion for
-              <strong className="text-purple-600">
+              <strong className={`${emphasis}`}>
                 {" "}
                 software engineering and machine learning.{" "}
               </strong>
               I have a strong understanding of multiple programming languages
               including industry experience with:
-              <strong className="text-orange-600">
+              <strong className={`${emphasis}`}>
                 {" "}
                 Python, C++, Java, and JavaScript.{" "}
               </strong>

@@ -6,6 +6,7 @@ import {
   AiFillMail,
   AiFillYoutube,
 } from "react-icons/ai";
+import { RiSunLine, RiSunFill } from "react-icons/ri";
 import StickyNav from "react-sticky-nav";
 
 // All icons:
@@ -14,10 +15,11 @@ const iconComponents = {
   AiFillLinkedin,
   AiFillMail,
   AiFillYoutube,
+  RiSunLine,
+  RiSunFill,
 };
 
-// Social media links:
-const socials = [
+const navIcons = [
   {
     name: "AiFillGithub",
     link: "https://www.github.com/jventura1738",
@@ -34,17 +36,17 @@ const socials = [
     name: "AiFillMail",
     link: "https://www.gmail.com",
   },
+  {
+    name: "RiSunLine",
+    link: "",
+  },
+  {
+    name: "RiSunFill",
+    link: "",
+  },
 ];
 
-// Sneaky way to dynamically render icons:
-export const AiIconDynamic = ({ type }) => {
-  const AiIcon = iconComponents[type];
-  return (
-    <AiIcon className="h-9 w-9 hover:text-purple-400 shadow-lg hover:-translate-y-1 duration-300"></AiIcon>
-  );
-};
-
-function Header() {
+function Header({ theme, toggleTheme, themeStyles }) {
   // These will be used for the burger boi menu:
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
@@ -60,12 +62,24 @@ function Header() {
     };
   }, [menuRef, setIsOpen]);
 
+  // Sneaky way to dynamically render icons:
+  const MyIconDynamic = ({ type }) => {
+    let MyIcon = iconComponents[type];
+    return (
+      <MyIcon
+        className={`h-9 w-9 hover:${themeStyles[theme].headerHover} shadow-lg hover:-translate-y-1 duration-300`}
+      />
+    );
+  };
+
   return (
     <StickyNav className="overflow-visible z-10">
       <nav className="text-white">
         <div className="flex bg-theme/50 items-center justify-between shadow-purple-600/25 shadow-xl px-10 py-6">
           <a href="/">
-            <h1 className="text-2xl hover:text-purple-400 duration-300">
+            <h1
+              className={`text-2xl hover:${themeStyles[theme].headerHover} duration-300`}
+            >
               Justin Ventura
             </h1>
           </a>
@@ -113,26 +127,63 @@ function Header() {
             </button>
           </div>
           <div className="sm:hidden md:hidden lg:flex xl:flex 2xl:flex md:gap-x-12">
-            {socials.map((social) => (
-              <li key={social.name} className="list-none mx-5">
-                <a href={social.link} target="_blank">
-                  <AiIconDynamic type={social.name} />
+            {navIcons.slice(0, -2).map((icon) => (
+              <li key={icon.name} className="list-none mx-5">
+                <a href={icon.link} target="_blank">
+                  <MyIconDynamic type={icon.name} />
                 </a>
               </li>
             ))}
+            <li
+              key={navIcons[navIcons.length - (theme === "light" ? 1 : 2)].name}
+              className="list-none mx-5"
+            >
+              <button
+                onClick={() => {
+                  toggleTheme();
+                }}
+              >
+                <MyIconDynamic
+                  type={
+                    navIcons[navIcons.length - (theme === "light" ? 1 : 2)].name
+                  }
+                />
+              </button>
+            </li>
           </div>
           {
             // This is what causes the menu to pop up after clicking the burger.
             isOpen && (
               <div className="absolute right-0 mt-2 mr-6 w-20 bg-black/50 rounded-md shadow-lg top-20">
                 <div className="flex flex-col items-center justify-center">
-                  {socials.map((social) => (
-                    <li key={social.link} className="list-none py-3">
-                      <a href={social.link} target="_blank">
-                        <AiIconDynamic type={social.name} />
+                  {navIcons.slice(0, -2).map((icon) => (
+                    <li key={icon.link} className="list-none py-3">
+                      <a href={icon.link} target="_blank">
+                        <MyIconDynamic type={icon.name} />
                       </a>
                     </li>
                   ))}
+                  <li
+                    key={
+                      navIcons[navIcons.length - (theme === "light" ? 1 : 2)]
+                        .name
+                    }
+                    className="list-none mx-5"
+                  >
+                    <button
+                      onClick={() => {
+                        toggleTheme();
+                      }}
+                    >
+                      <MyIconDynamic
+                        type={
+                          navIcons[
+                            navIcons.length - (theme === "light" ? 1 : 2)
+                          ].name
+                        }
+                      />
+                    </button>
+                  </li>
                 </div>
               </div>
             )

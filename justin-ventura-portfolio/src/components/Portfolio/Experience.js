@@ -114,7 +114,7 @@ const experiences = [
   },
 ];
 
-const Experience = () => {
+const Experience = ({ theme, setTheme, themeStyles }) => {
   return (
     <div className="text-white">
       <div className="grid grid-cols-1">
@@ -122,7 +122,10 @@ const Experience = () => {
           <h1 className="text-6xl my-10">My Work Experience.</h1>
         </div>
         {experiences.map((experience) => (
-          <div className="col-span-1 bg-theme/50 rounded-2xl grid grid-cols-3 md:grid-cols-1 m-6">
+          <div
+            key={experience.title + "@" + experience.org}
+            className="col-span-1 bg-theme/50 rounded-2xl grid grid-cols-3 md:grid-cols-1 m-6"
+          >
             <div className="col-span-1 flex items-center justify-center">
               <img
                 src={experience.imageUrl}
@@ -148,7 +151,8 @@ const Experience = () => {
               <div className="row-span-1 text-center md:hidden">
                 {experience.tech.map((technology) => (
                   <span
-                    className={`inline-block bg-gradient-to-br from-purple-600/50 to-orange-400/50 rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
+                    key={technology}
+                    className={`inline-block bg-gradient-to-br ${themeStyles[theme].experienceGradient} rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
                   >
                     {technology}
                   </span>
@@ -157,7 +161,8 @@ const Experience = () => {
               <div className="row-span-1 text-center">
                 {experience.keywords.map((keyword) => (
                   <span
-                    className={`inline-block bg-gradient-to-br from-purple-600/50 to-orange-400/50 rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
+                    key={keyword}
+                    className={`inline-block bg-gradient-to-br ${themeStyles[theme].experienceGradient} rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
                   >
                     {keyword}
                   </span>

@@ -19,9 +19,9 @@ function About() {
         <div className="grid grid-cols-1 bg-theme/50 rounded-lg">
           <div className="col-span-1 text-center mx-6 mb-6">
             <h1 className="text-6xl m-6">Welcome to my Portfolio.</h1>
-            <p className="text-2xl">
+            <span className="text-2xl">
               <Typer />
-            </p>
+            </span>
           </div>
           <div className="col-span-1 grid grid-cols-2 mx-6">
             <div className="col-span-2 text-center"></div>
@@ -31,7 +31,7 @@ function About() {
                   Justin's Skills & Experience.
                 </p>
                 <Link className="text-center" to="skills-section" smooth={true}>
-                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Jump to Skills
                   </button>
                 </Link>
@@ -43,7 +43,7 @@ function About() {
                   Justin's Music & Playlists.
                 </p>
                 <Link className="text-center" to="skills-section" smooth={true}>
-                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Browse Music
                   </button>
                 </Link>
@@ -55,7 +55,7 @@ function About() {
                   Justin's Teaching Resources.
                 </p>
                 <Link className="text-center" to="skills-section" smooth={true}>
-                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Teaching Help
                   </button>
                 </Link>
@@ -67,7 +67,7 @@ function About() {
                   Justin's COC Clan: KinetiKZ.
                 </p>
                 <Link className="text-center" to="skills-section" smooth={true}>
-                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Join KinetiKZ
                   </button>
                 </Link>

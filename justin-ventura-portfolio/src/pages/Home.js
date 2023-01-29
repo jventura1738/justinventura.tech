@@ -1,5 +1,5 @@
 // React:
-import React from "react";
+import React, { useEffect } from "react";
 
 // My react components:
 import Layout from "../components/Layout";
@@ -10,12 +10,11 @@ import Projects from "../components/Portfolio/Projects";
 import Contact from "../components/Contact";
 import Skills from "../components/Portfolio/Skills";
 
-import bgImage from "../assets/nightsky.jpeg";
 import "../css/App.css";
 
-const Home = () => {
+const Home = ({ theme, toggleTheme, themeStyles }) => {
   const backgroundStyles = {
-    backgroundImage: `url(${bgImage})`,
+    backgroundImage: themeStyles[theme].backgroundImage,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
@@ -26,18 +25,28 @@ const Home = () => {
 
   return (
     <div style={backgroundStyles}>
-      <Layout>
+      <Layout theme={theme} toggleTheme={toggleTheme} themeStyles={themeStyles}>
         <About />
-        <hr className="w-48 h-1 mx-auto mt-20 mb-8 bg-gray-100 border-0 rounded dark:bg-orange-700" />
-        <Bio />
+        <hr
+          className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
+        />
+        <Bio emphasis={themeStyles[theme].bioEmphasis} />
         <hr
           id="skills-section"
-          className="w-48 h-1 mx-auto mt-20 mb-8 bg-gray-100 border-0 rounded dark:bg-orange-700"
+          className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
         />
         <Skills />
-        <hr className="w-48 h-1 mx-auto mt-20 mb-8 bg-gray-100 border-0 rounded dark:bg-orange-700" />
-        <Experience />
-        <hr className="w-48 h-1 mx-auto mt-20 mb-8 bg-gray-100 border-0 rounded dark:bg-orange-700" />
+        <hr
+          className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
+        />
+        <Experience
+          theme={theme}
+          toggleTheme={toggleTheme}
+          themeStyles={themeStyles}
+        />
+        <hr
+          className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
+        />
         <Projects />
         <Contact />
       </Layout>
