@@ -130,12 +130,7 @@ const Experience = () => {
               ></img>
             </div>
             <div className="mx-4 col-span-2 grid-rows-3">
-              <h1
-                // className={`text-2xl m-6 text-center
-                // hover:text-${experience.id % 2 === 0 ? "orange" : "purple"}-400
-                // duration-300`}
-                className="text-2xl m-6 text-center hover:text-orange-400 duration-300"
-              >
+              <h1 className="text-2xl m-6 text-center hover:text-orange-400 duration-300">
                 {experience.title + " at " + experience.org}
               </h1>
               <hr className="w-48 h-1 mx-auto mb-8 bg-gray-400 border-0 rounded md:hidden" />
@@ -153,7 +148,7 @@ const Experience = () => {
               <div className="row-span-1 text-center md:hidden">
                 {experience.tech.map((technology) => (
                   <span
-                    className={`inline-block bg-purple-600 rounded-full px-3 py-1 text-sm font-semibold text-white/50 mr-2 mb-2`}
+                    className={`inline-block bg-gradient-to-br from-purple-600/50 to-orange-400/50 rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
                   >
                     {technology}
                   </span>
@@ -162,7 +157,7 @@ const Experience = () => {
               <div className="row-span-1 text-center">
                 {experience.keywords.map((keyword) => (
                   <span
-                    className={`inline-block bg-purple-600 rounded-full px-3 py-1 text-sm font-semibold text-white/50 mr-2 mb-2`}
+                    className={`inline-block bg-gradient-to-br from-purple-600/50 to-orange-400/50 rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
                   >
                     {keyword}
                   </span>

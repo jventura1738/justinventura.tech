@@ -20,11 +20,11 @@ import logo from "./assets/logo.svg";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
