@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 import Typer from "../Typewriter";
 
@@ -29,9 +30,11 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's Skills & Experience.
                 </p>
-                <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
-                  View Skills
-                </button>
+                <Link className="text-center" to="skills-section" smooth={true}>
+                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                    Jump to Skills
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="col-span-1">
@@ -39,9 +42,11 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's Music & Playlists.
                 </p>
-                <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
-                  Browse Music
-                </button>
+                <Link className="text-center" to="skills-section" smooth={true}>
+                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                    Browse Music
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="col-span-1">
@@ -49,9 +54,11 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's Teaching Resources.
                 </p>
-                <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
-                  Get Tutoring
-                </button>
+                <Link className="text-center" to="skills-section" smooth={true}>
+                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                    Teaching Help
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="col-span-1">
@@ -59,9 +66,11 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's COC Clan: KinetiKZ.
                 </p>
-                <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
-                  Join KinetiKZ
-                </button>
+                <Link className="text-center" to="skills-section" smooth={true}>
+                  <button class="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                    Join KinetiKZ
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
