@@ -3,18 +3,13 @@ import { AiFillCalendar, AiFillEnvironment } from "react-icons/ai";
 
 // Import all logos from assets/orgLogos folder:
 import amazonLogo from "../../assets/orgLogos/amazonLogo.jpg";
-import amazonTransparent from "../../assets/orgLogos/amazonTransparent.jpg";
 import awsLogo from "../../assets/orgLogos/awsLogo.jpg";
 import cmuLogo from "../../assets/orgLogos/cmuLogo.jpg";
-import cmuTransparent from "../../assets/orgLogos/cmuTransparent.jpg";
-import googleTransparent from "../../assets/orgLogos/googleTransparent.jpg";
 import harvardLogo from "../../assets/orgLogos/harvardLogo.jpg";
 import hensonLogo from "../../assets/orgLogos/hensonLogo.jpg";
-import metaTransparent from "../../assets/orgLogos/metaTransparent.jpg";
 import mitLogo from "../../assets/orgLogos/mitLogo.jpg";
 import suLogo from "../../assets/orgLogos/suLogo.jpg";
 import umdLogo from "../../assets/orgLogos/umdLogo.jpg";
-import umdTransparent from "../../assets/orgLogos/umdTransparent.jpg";
 
 const experiences = [
   {
@@ -136,9 +131,10 @@ const Experience = () => {
             </div>
             <div className="mx-4 col-span-2 grid-rows-3">
               <h1
-                className={`text-2xl m-6 text-center hover:text-${
-                  experience.id % 2 === 0 ? "orange" : "purple"
-                }-400 duration-300`}
+                // className={`text-2xl m-6 text-center
+                // hover:text-${experience.id % 2 === 0 ? "orange" : "purple"}-400
+                // duration-300`}
+                className="text-2xl m-6 text-center hover:text-orange-400 duration-300"
               >
                 {experience.title + " at " + experience.org}
               </h1>
