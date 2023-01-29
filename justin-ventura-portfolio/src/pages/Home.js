@@ -16,7 +16,8 @@ const Home = ({ theme, toggleTheme, themeStyles }) => {
   const backgroundStyles = {
     backgroundImage: themeStyles[theme].backgroundImage,
     backgroundSize: "cover",
-    backgroundAttachment: "fixed",
+    backgroundRepear: "no-repeat",
+    position: "fixed",
     backgroundPosition: "center",
     width: "100%",
     height: "100%",
@@ -24,8 +25,14 @@ const Home = ({ theme, toggleTheme, themeStyles }) => {
   };
 
   return (
-    <div style={backgroundStyles}>
-      <Layout theme={theme} toggleTheme={toggleTheme} themeStyles={themeStyles}>
+    <div>
+      <div style={backgroundStyles}></div>
+      <Layout
+        className="absolute"
+        theme={theme}
+        toggleTheme={toggleTheme}
+        themeStyles={themeStyles}
+      >
         <About />
         <hr
           className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
