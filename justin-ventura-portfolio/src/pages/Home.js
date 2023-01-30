@@ -1,5 +1,5 @@
 // React:
-import React, { useEffect } from "react";
+import React from "react";
 
 // My react components:
 import Layout from "../components/Layout";
@@ -54,7 +54,14 @@ const Home = ({ theme, toggleTheme, themeStyles }) => {
         <hr
           className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
         />
-        <Projects />
+        <Projects
+          theme={theme}
+          toggleTheme={toggleTheme}
+          themeStyles={themeStyles}
+        />
+        <hr
+          className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
+        />
         <Contact />
       </Layout>
     </div>

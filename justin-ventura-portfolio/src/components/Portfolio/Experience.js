@@ -5,11 +5,8 @@ import { AiFillCalendar, AiFillEnvironment } from "react-icons/ai";
 import amazonLogo from "../../assets/orgLogos/amazonLogo.jpg";
 import awsLogo from "../../assets/orgLogos/awsLogo.jpg";
 import cmuLogo from "../../assets/orgLogos/cmuLogo.jpg";
-import harvardLogo from "../../assets/orgLogos/harvardLogo.jpg";
 import hensonLogo from "../../assets/orgLogos/hensonLogo.jpg";
-import mitLogo from "../../assets/orgLogos/mitLogo.jpg";
 import suLogo from "../../assets/orgLogos/suLogo.jpg";
-import umdLogo from "../../assets/orgLogos/umdLogo.jpg";
 
 const experiences = [
   {
@@ -114,7 +111,7 @@ const experiences = [
   },
 ];
 
-const Experience = ({ theme, setTheme, themeStyles }) => {
+const Experience = ({ theme, toggleTheme, themeStyles }) => {
   return (
     <div className="text-white">
       <div className="grid grid-cols-1">
@@ -129,12 +126,13 @@ const Experience = ({ theme, setTheme, themeStyles }) => {
             <div className="col-span-1 flex items-center justify-center">
               <img
                 src={experience.imageUrl}
+                alt={`${experience.org} Logo`}
                 className="rounded-2xl h-96 w-96 lg:h-72 lg:w-72 md:mx-auto my-3 justify-center"
               ></img>
             </div>
             <div className="mx-4 col-span-2 grid-rows-3">
               <h1 className="text-2xl m-6 text-center hover:text-orange-400 duration-300">
-                {experience.title + " at " + experience.org}
+                {experience.title + " @ " + experience.org}
               </h1>
               <hr className="w-48 h-1 mx-auto mb-8 bg-gray-400 border-0 rounded md:hidden" />
               <div className="md:hidden grid-cols-2">

@@ -16,7 +16,11 @@ function Bio({ emphasis }) {
         </div>
         <div className="grid grid-cols-3 md:grid-cols-1">
           <div className="col-span-1 text-center">
-            <img src={justinImage} className="rounded-full"></img>
+            <img
+              src={justinImage}
+              alt="Justin Profile"
+              className="rounded-full"
+            ></img>
           </div>
           <div className="flex col-span-2 justify-center items-center m-6">
             <p className="text-xl text-center">

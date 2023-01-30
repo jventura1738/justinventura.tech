@@ -75,7 +75,7 @@ function Header({ theme, toggleTheme, themeStyles }) {
   return (
     <StickyNav className="overflow-visible z-10">
       <nav className="text-white">
-        <div className="flex bg-theme/50 items-center justify-between shadow-purple-600/25 shadow-xl px-10 py-6">
+        <div className="flex bg-theme/70 items-center justify-between shadow-purple-600/25 shadow-xl px-10 py-6">
           <a href="/">
             <h1
               className={`text-2xl hover:${themeStyles[theme].headerHover} duration-300`}
@@ -129,7 +129,7 @@ function Header({ theme, toggleTheme, themeStyles }) {
           <div className="sm:hidden md:hidden lg:flex xl:flex 2xl:flex md:gap-x-12">
             {navIcons.slice(0, -2).map((icon) => (
               <li key={icon.name} className="list-none mx-5">
-                <a href={icon.link} target="_blank">
+                <a href={icon.link} target="_blank" rel="noreferrer">
                   <MyIconDynamic type={icon.name} />
                 </a>
               </li>
@@ -154,11 +154,11 @@ function Header({ theme, toggleTheme, themeStyles }) {
           {
             // This is what causes the menu to pop up after clicking the burger.
             isOpen && (
-              <div className="absolute right-0 mt-2 mr-6 w-20 bg-black/50 rounded-md shadow-lg top-20">
+              <div className="absolute right-0 mt-2 mr-6 w-20 bg-black/70 rounded-md shadow-lg top-20">
                 <div className="flex flex-col items-center justify-center">
                   {navIcons.slice(0, -2).map((icon) => (
                     <li key={icon.link} className="list-none py-3">
-                      <a href={icon.link} target="_blank">
+                      <a href={icon.link} target="_blank" rel="noreferrer">
                         <MyIconDynamic type={icon.name} />
                       </a>
                     </li>
