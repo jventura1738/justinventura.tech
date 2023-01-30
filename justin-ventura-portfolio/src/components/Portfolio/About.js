@@ -42,7 +42,7 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's Music & Playlists.
                 </p>
-                <Link className="text-center" to="skills-section" smooth={true}>
+                <Link className="text-center" to="/" smooth={true}>
                   <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Browse Music
                   </button>
@@ -54,7 +54,7 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's Teaching Resources.
                 </p>
-                <Link className="text-center" to="skills-section" smooth={true}>
+                <Link className="text-center" to="/" smooth={true}>
                   <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Teaching Help
                   </button>
@@ -66,7 +66,7 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's COC Clan: KinetiKZ.
                 </p>
-                <Link className="text-center" to="skills-section" smooth={true}>
+                <Link className="text-center" to="/" smooth={true}>
                   <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
                     Join KinetiKZ
                   </button>
