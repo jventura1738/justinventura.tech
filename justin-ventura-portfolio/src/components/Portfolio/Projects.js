@@ -222,7 +222,7 @@ const Projects = ({ theme, toggleTheme, themeStyles }) => {
                 {project.keywords.map((keyword) => (
                   <span
                     key={keyword}
-                    className={`inline-block bg-gradient-to-br ${themeStyles[theme].experienceGradient} rounded-full px-3 py-1 text-sm font-semibold text-white/75 mr-2 mb-2`}
+                    className={`inline-block bg-gradient-to-br ${themeStyles[theme].experienceGradient} rounded-full px-3 py-1 lg:text-lg md:text-sm sm:text-xs font-semibold text-white/75 mr-2 mb-2`}
                   >
                     {keyword}
                   </span>
