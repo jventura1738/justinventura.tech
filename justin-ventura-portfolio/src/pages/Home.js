@@ -59,10 +59,6 @@ const Home = ({ theme, toggleTheme, themeStyles }) => {
           toggleTheme={toggleTheme}
           themeStyles={themeStyles}
         />
-        <hr
-          className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
-        />
-        <Contact />
       </Layout>
     </div>
   );
