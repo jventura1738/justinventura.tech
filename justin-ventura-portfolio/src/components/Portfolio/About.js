@@ -43,7 +43,8 @@ function About() {
                   Justin's Music & Playlists.
                 </p>
                 <Link className="text-center" to="/" smooth={true}>
-                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  {/* <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full"> */}
+                  <button className="bg-gray-500 cursor-not-allowed text-white font-bold py-2 px-4 rounded-full ">
                     Browse Music
                   </button>
                 </Link>
@@ -55,7 +56,8 @@ function About() {
                   Justin's Teaching Resources.
                 </p>
                 <Link className="text-center" to="/" smooth={true}>
-                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  {/* <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full"> */}
+                  <button className="bg-gray-500 cursor-not-allowed text-white font-bold py-2 px-4 rounded-full ">
                     Teaching Help
                   </button>
                 </Link>
@@ -67,7 +69,8 @@ function About() {
                   Justin's COC Clan: KinetiKZ.
                 </p>
                 <Link className="text-center" to="/" smooth={true}>
-                  <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
+                  {/* <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full"> */}
+                  <button className="bg-gray-500 cursor-not-allowed text-white font-bold py-2 px-4 rounded-full ">
                     Join KinetiKZ
                   </button>
                 </Link>

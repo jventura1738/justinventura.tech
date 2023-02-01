@@ -180,7 +180,7 @@ const projects = [
 
 const Projects = ({ theme, toggleTheme, themeStyles }) => {
   return (
-    <div className="text-white">
+    <div className="text-white mb-10">
       <div className="grid grid-cols-1">
         <div className="col-span-1 text-center">
           <h1 className="text-6xl my-10">My Projects.</h1>

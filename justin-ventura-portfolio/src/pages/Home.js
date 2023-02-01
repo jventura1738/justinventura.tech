@@ -7,7 +7,6 @@ import About from "../components/Portfolio/About";
 import Bio from "../components/Portfolio/Bio";
 import Experience from "../components/Portfolio/Experience";
 import Projects from "../components/Portfolio/Projects";
-import Contact from "../components/Contact";
 import Skills from "../components/Portfolio/Skills";
 
 import "../css/App.css";
@@ -27,12 +26,7 @@ const Home = ({ theme, toggleTheme, themeStyles }) => {
   return (
     <div>
       <div style={backgroundStyles}></div>
-      <Layout
-        className="absolute"
-        theme={theme}
-        toggleTheme={toggleTheme}
-        themeStyles={themeStyles}
-      >
+      <Layout theme={theme} toggleTheme={toggleTheme} themeStyles={themeStyles}>
         <About />
         <hr
           className={`w-48 h-1 mx-auto mt-20 mb-8 border-0 rounded ${themeStyles[theme].horizontalRule}`}
