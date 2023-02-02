@@ -48,7 +48,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home {...themeProps} />}></Route>
-          <Route path="/contact" element={<Contact {...themeProps} />}></Route>
+          {/* <Route path="/contact" element={<Contact {...themeProps} />}></Route> */}
         </Routes>
       </Router>
     </div>

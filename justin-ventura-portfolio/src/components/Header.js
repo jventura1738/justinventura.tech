@@ -37,7 +37,7 @@ const navIcons = [
   },
   {
     name: "AiFillMail",
-    link: "/contact",
+    link: "mailto:justinventuracontact@gmail.com",
     target: "_self",
   },
   {

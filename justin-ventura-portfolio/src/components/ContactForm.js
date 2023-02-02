@@ -9,14 +9,26 @@ function ContactForm({ theme, toggleTheme, themeStyles }) {
             <div className="rounded-2xl space-y-6 bg-theme/50 px-4 py-5 sm:p-6">
               <div className="grid grid-cols-1 gap-6">
                 <div className="col-span-1 sm:col-span-2">
-                  <label htmlFor="Email address" className="block text-sm">
-                    Email Address
+                  <label htmlFor="Name" className="block text-sm">
+                    Name
                   </label>
-                  <div className="mt-1 flex rounded-2xl shadow-sm text-white">
+                  <div className="my-2 flex rounded-2xl shadow-sm text-white">
                     <input
                       type="text"
                       name="company-website"
                       id="company-website"
+                      className={`${themeStyles[theme].contactFormBox} caret-orange-500 focus:border-orange-500 focus:ring-orange-500  block w-full flex-1 p-2 rounded-md rounded-r-md sm:text-sm`}
+                      placeholder=" ex: John Smith/Jane Doe"
+                    />
+                  </div>
+                  <label htmlFor="Email address" className="block text-sm">
+                    Email Address
+                  </label>
+                  <div className="my-2 flex rounded-2xl shadow-sm text-white">
+                    <input
+                      type="text"
+                      name="email-address"
+                      id="email-address"
                       className={`${themeStyles[theme].contactFormBox} caret-orange-500 focus:border-orange-500 focus:ring-orange-500  block w-full flex-1 p-2 rounded-md rounded-r-md sm:text-sm`}
                       placeholder=" ex: recruiter@company.com"
                     />
@@ -26,60 +38,60 @@ function ContactForm({ theme, toggleTheme, themeStyles }) {
               <fieldset>
                 <p className="text-sm">What would you like to chat about?</p>
                 <div className="mt-4 space-y-4">
-                  <div className="flex items-center">
+                  <div class="flex items-center">
                     <input
-                      id="recruit-inquiry"
-                      name="Recruiting"
+                      id="push-everything"
+                      name="push-notifications"
                       type="radio"
-                      className="h-4 w-4 border-black text-orange-500 focus:ring-orange-500/0"
+                      class="h-4 w-4 border-gray-300 text-orange-600 focus:ring-orange-500"
                     />
                     <label
-                      htmlFor="Recruitment"
-                      className="ml-3 block text-sm font-medium"
+                      for="push-everything"
+                      class="ml-3 block text-sm font-medium text-white"
                     >
-                      Recruitment
+                      Recruiting
                     </label>
                   </div>
-                  <div className="flex items-center">
+                  <div class="flex items-center">
                     <input
-                      id="tutor-inquiry"
-                      name="Tutoring"
+                      id="push-email"
+                      name="push-notifications"
                       type="radio"
-                      className="h-4 w-4 border-black text-orange-500 focus:ring-orange-500/0"
+                      class="h-4 w-4 border-gray-300 text-orange-600 focus:ring-orange-500"
                     />
                     <label
-                      htmlFor="Tutoring"
-                      className="ml-3 block text-sm font-medium"
+                      for="push-email"
+                      class="ml-3 block text-sm font-medium text-white"
                     >
                       Tutoring
                     </label>
                   </div>
-                  <div className="flex items-center">
+                  <div class="flex items-center">
                     <input
-                      id="music-inquiry"
-                      name="Music"
+                      id="push-nothing"
+                      name="push-notifications"
                       type="radio"
-                      className="h-4 w-4 border-black text-orange-500 focus:ring-orange-500/0"
+                      class="h-4 w-4 border-gray-300 text-orange-600 focus:ring-orange-500"
                     />
                     <label
-                      htmlFor="Music"
-                      className="ml-3 block text-sm font-medium"
+                      for="push-nothing"
+                      class="ml-3 block text-sm font-medium text-white"
                     >
-                      Music / Collaboration Inquiry
+                      Music
                     </label>
                   </div>
-                  <div className="flex items-center">
+                  <div class="flex items-center">
                     <input
-                      id="clash-inquiry"
-                      name="Clash of Clans"
+                      id="push-nothing"
+                      name="push-notifications"
                       type="radio"
-                      className={`h-4 w-4 border-black text-orange-500 focus:ring-orange-500/0`}
+                      class="h-4 w-4 border-gray-300 text-orange-600 focus:ring-orange-500"
                     />
                     <label
-                      htmlFor="Clash of Clans"
-                      className="ml-3 block text-sm font-medium"
+                      for="push-nothing"
+                      class="ml-3 block text-sm font-medium text-white"
                     >
-                      Clash of Clans Clan: KinetiKZ
+                      KinetiKZ
                     </label>
                   </div>
                 </div>
