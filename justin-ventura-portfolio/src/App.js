@@ -1,5 +1,5 @@
 // React:
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // My react components:
@@ -14,6 +14,7 @@ import darkBgImage from "./assets/nightsky.jpeg";
 import lightBgImage from "./assets/daysky.jpeg";
 
 function App() {
+  // Handle themes:
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
