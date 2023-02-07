@@ -23,7 +23,7 @@ function Bio({ emphasis }) {
             ></img>
           </div>
           <div className="flex col-span-2 justify-center items-center m-6">
-            <p className="text-xl text-center">
+            <span className="text-xl text-center">
               I am a recent
               <strong className={`${emphasis}`}>
                 {" "}
@@ -70,7 +70,7 @@ function Bio({ emphasis }) {
                   alt="logo"
                 />
               </div>
-            </p>
+            </span>
           </div>
         </div>
       </div>

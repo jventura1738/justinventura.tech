@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // My react components:
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 // CSS:
 import "./css/App.css";
@@ -13,6 +14,7 @@ import darkBgImage from "./assets/nightsky.jpeg";
 import lightBgImage from "./assets/daysky.jpeg";
 
 function App() {
+  // Handle themes:
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -26,6 +28,8 @@ function App() {
       experienceHover: "text-orange-400",
       experienceGradient: "from-purple-600/50 to-orange-400/50",
       horizontalRule: "bg-orange-400",
+      contactFormBox: "bg-gray-500/50",
+      radioButton: "orange-500",
     },
     light: {
       backgroundImage: `url(${lightBgImage})`,
@@ -34,6 +38,8 @@ function App() {
       experienceHover: "text-purple-400",
       experienceGradient: "from-orange-600/50 to-purple-400/50",
       horizontalRule: "bg-purple-500",
+      contactFormBox: "bg-theme/50",
+      radioButton: "purple-500",
     },
   };
   const themeProps = { theme, toggleTheme, themeStyles };
@@ -42,6 +48,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home {...themeProps} />}></Route>
+          <Route path="/contact" element={<Contact {...themeProps} />}></Route>
         </Routes>
       </Router>
     </div>

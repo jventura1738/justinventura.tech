@@ -10,7 +10,7 @@ function Layout({ children, theme, toggleTheme, themeStyles }) {
         toggleTheme={toggleTheme}
         themeStyles={themeStyles}
       />
-      <div className="content">{children}</div>
+      <div className="content relative">{children}</div>
       <Footer />
     </React.Fragment>
   );
