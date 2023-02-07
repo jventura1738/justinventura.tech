@@ -1,5 +1,5 @@
 // React:
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // My react components:
@@ -48,7 +48,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home {...themeProps} />}></Route>
-          {/* <Route path="/contact" element={<Contact {...themeProps} />}></Route> */}
+          <Route path="/contact" element={<Contact {...themeProps} />}></Route>
         </Routes>
       </Router>
     </div>

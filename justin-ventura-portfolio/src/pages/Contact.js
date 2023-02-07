@@ -22,7 +22,7 @@ function Contact({ theme, toggleTheme, themeStyles }) {
       <Layout theme={theme} toggleTheme={toggleTheme} themeStyles={themeStyles}>
         <div className="col-span-1 text-center">
           <h1 className="text-6xl mt-10 mb-6">Contact Me.</h1>
-          <p className="text-xl">
+          <p className="text-xl mb-6">
             Leave your information below and I will get back to you ASAP!
           </p>
         </div>

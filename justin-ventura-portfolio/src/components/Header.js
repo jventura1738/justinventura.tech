@@ -37,7 +37,7 @@ const navIcons = [
   },
   {
     name: "AiFillMail",
-    link: "mailto:justinventuracontact@gmail.com",
+    link: "/contact",
     target: "_self",
   },
   {
@@ -80,7 +80,7 @@ function Header({ theme, toggleTheme, themeStyles }) {
 
   return (
     <nav className="text-white z-50 sticky top-0">
-      <div className="flex bg-theme/70 items-center justify-between shadow-purple-600/25 shadow-xl px-10 py-6">
+      <div className="flex bg-theme/70 items-center justify-between shadow-purple-600/25 shadow-xl px-10 py-4">
         <Link to="/">
           <h1
             className={`text-2xl hover:${themeStyles[theme].headerHover} duration-300`}
