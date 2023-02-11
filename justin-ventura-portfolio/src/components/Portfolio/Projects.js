@@ -1,12 +1,23 @@
 import React from "react";
 
+import spotifyapplemusic from "../../assets/projectImages/spotifyapplemusic.png";
+import younglambda from "../../assets/projectImages/younglambda.png";
+import connected from "../../assets/projectImages/connected.png";
+import internshipportal from "../../assets/projectImages/internshipportal.png";
+import hurricanedetect from "../../assets/projectImages/hurricanedetect.png";
+import ring from "../../assets/projectImages/ring.png";
+import neuralnetwork from "../../assets/projectImages/neuralnetwork.png";
+import knightrandomwalk from "../../assets/projectImages/knightrandomwalk.png";
+import spellcheck from "../../assets/projectImages/spellcheck.png";
+import iomodel from "../../assets/projectImages/iomodel.png";
+
 const projects = [
   {
     id: 10,
     name: "Apple Music - Spotify Converter",
     description:
       "(coming soon) A web app for converting Apple Music playlists to Spotify, and the other way around.  Requires Apple Music and Spotify accounts.  Creating this so when my friends send me their Spotify playlists I can easily load them into Apple Music.  Apple Music FTW!",
-    image: "https://picsum.photos/200/300",
+    image: spotifyapplemusic,
     link: "https://www.github.com/jventura1738/",
     keywords: [
       "Python",
@@ -23,7 +34,7 @@ const projects = [
     name: '"Young Lambda"',
     description:
       "The official KinetiKZ discord bot using COC API!  This bot tracks wars, donations, and more.  It also has month/season leaderboard tracking to track the best players my various metrics in the clan.",
-    image: "https://picsum.photos/200/300",
+    image: younglambda,
     link: "https://www.github.com/jventura1738",
     keywords: ["Python", "Clash of Clans API", "Discord.py", "COC.py"].sort(),
   },
@@ -32,7 +43,7 @@ const projects = [
     name: "CONNECTED (Hack Harvard 2022)",
     description:
       "A social media app aimed at safe community interaction.  This was a hackathon project at Hack Harvard 2022.",
-    image: "https://picsum.photos/200/300",
+    image: connected,
     link: "www.github.com/jventura1738/",
     keywords: [
       "Python",
@@ -49,7 +60,7 @@ const projects = [
     name: "Student Internship Portal",
     description:
       "This web application facilitates the discovery, acquisition, and completion of an internship.  It was created as a group capstone project for my senior year at Salisbury University, where I was the team leader and mostly responsible for the backend (Python, Flask, PostgreSQL).",
-    image: "https://picsum.photos/200/300",
+    image: internshipportal,
     link: "https://www.github.com/jventura1738/InternshipPortal",
     keywords: [
       "Python",
@@ -67,7 +78,7 @@ const projects = [
     name: "Hurricane Detection (Hack MIT 2021)",
     description:
       "A web app for tracking hurricanes and providing emergency preparation resources.  This was a hackathon project at Hack MIT 2021.",
-    image: "https://picsum.photos/200/300",
+    image: hurricanedetect,
     link: "https://www.github.com/jacobduncan00/hackmit2021",
     keywords: [
       "Python",
@@ -82,10 +93,10 @@ const projects = [
   },
   {
     id: 5,
-    name: "ArXiV Search Engine",
+    name: "ArXiV Search Engine (RING)",
     description:
-      "A research paper search engine powered by a parallelized Page Rank + HITS algorithm optimized using compressed sparse row (CSR) matrix formatting from scratch.  Extremely optimized for speed and scalability, utilizing MPI for parallelization, matrix file partitioning, and sparse matrix encodings.",
-    image: "https://picsum.photos/200/300",
+      'A research paper search engine "RING" powered by a parallelized Page Rank + HITS algorithm optimized using compressed sparse row (CSR) matrix formatting from scratch.  Extremely optimized for speed and scalability, utilizing MPI for parallelization, matrix file partitioning, and sparse matrix encodings.',
+    image: ring,
     link: "https://www.github.com/jventura1738/COSC420",
     keywords: [
       "C",
@@ -106,7 +117,7 @@ const projects = [
     name: "Titanic Survival Prediction",
     description:
       "Created neural network and K-NN models from scratch to predict the survival of passengers on the Titanic.  Model artifact produced ~82% accuracy.",
-    image: "https://picsum.photos/200/300",
+    image: neuralnetwork,
     link: "https://www.github.com/jventura1738/COSC311",
     keywords: [
       "Python",
@@ -125,7 +136,7 @@ const projects = [
     name: "Knight Random Walk Simulation",
     description:
       "A simulation and demonstration of expected numer of moves to return to his corner.  Solution and Proof (written in LaTeX) of the expected numer of moves is also included within the GitHub repository.  This simulation is optimized for speed and is clean of memory leaks.",
-    image: "https://picsum.photos/200/300",
+    image: knightrandomwalk,
     link: "https://www.github.com/jventura1738/COSC320",
     keywords: [
       "C++",
@@ -144,7 +155,7 @@ const projects = [
     name: "Auto-Correct",
     description:
       "A program that suggests fixes to misspelled words and lets user add unknown words to the dictionary.  The dictionary is a hash-table (doubly linked list chaining) from scratch (txt database) and is optimized for speed and is clean of memory leaks.",
-    image: "https://picsum.photos/200/300",
+    image: spellcheck,
     link: "https://www.github.com/jventura1738/COSC320",
     keywords: [
       "C++",
@@ -161,7 +172,7 @@ const projects = [
     name: "Wassily Leontief IO Model",
     description:
       "A C++ implementation and simulation of the Leontief IO model from scratch (matrix mulitplication, inversion, determinant, co-factor expansion, etc.).  The model is used to predict the impact of a change in the economy.  The model is also optimized for speed and is clean of memory leaks.",
-    image: "https://picsum.photos/200/300",
+    image: iomodel,
     link: "https://www.github.com/jventura1738/COSC320",
     keywords: [
       "C++",
