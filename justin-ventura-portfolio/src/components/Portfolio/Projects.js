@@ -16,9 +16,9 @@ const projects = [
     id: 10,
     name: "Apple Music - Spotify Converter",
     description:
-      "(coming soon) A web app for converting Apple Music playlists to Spotify, and the other way around.  Requires Apple Music and Spotify accounts.  Creating this so when my friends send me their Spotify playlists I can easily load them into Apple Music.  Apple Music FTW!",
+      "A web app for converting Apple Music playlists to Spotify, and the other way around.  Requires Apple Music and Spotify accounts.  Creating this so when my friends send me their Spotify playlists I can easily load them into Apple Music.  Apple Music FTW!",
     image: spotifyapplemusic,
-    link: "https://www.github.com/jventura1738/",
+    link: "https://github.com/jventura1738/spotify-2-apple",
     keywords: [
       "Python",
       "Flask",
@@ -213,7 +213,7 @@ const Projects = ({ theme, toggleTheme, themeStyles }) => {
                 className="flex justify-center text-center m-5"
               >
                 <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full">
-                  View Project (link may not work yet)
+                  View Project
                 </button>
               </a>
             </div>
