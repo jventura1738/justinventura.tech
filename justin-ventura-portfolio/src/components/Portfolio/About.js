@@ -42,12 +42,15 @@ function About() {
                 <p className="text-center lg:hidden">
                   Justin's Music & Playlists.
                 </p>
-                <Link className="text-center" to="/" smooth={true}>
+                <a
+                  className="text-center"
+                  // href="https://music.justinventura.tech"
+                >
                   {/* <button className="bg-purple-500 hover:bg-purple-700 duration-300 text-white font-bold py-2 px-4 rounded-full"> */}
                   <button className="bg-gray-500 cursor-not-allowed text-white font-bold py-2 px-4 rounded-full ">
                     Browse Music
                   </button>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="col-span-1">
