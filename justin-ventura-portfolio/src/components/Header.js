@@ -88,7 +88,10 @@ function Header({ theme, toggleTheme, themeStyles }) {
             Justin Ventura
           </h1>
         </Link>
-        <div ref={menuRef} className="md:flex lg:hidden xl:hidden 2xl:hidden">
+        <div
+          ref={menuRef}
+          className="md:flex lg:hidden xl:hidden 2xl:hidden insane:hidden"
+        >
           <button
             type="button"
             onClick={() => {
@@ -131,7 +134,7 @@ function Header({ theme, toggleTheme, themeStyles }) {
             </div>
           </button>
         </div>
-        <div className="sm:hidden md:hidden lg:flex xl:flex 2xl:flex md:gap-x-12">
+        <div className="sm:hidden md:hidden lg:flex xl:flex 2xl:flex insane:flex md:gap-x-12">
           {navIcons.slice(0, -2).map((icon) => (
             <li key={icon.name} className="list-none mx-5">
               <a href={icon.link} target={icon.target} rel="noreferrer">
