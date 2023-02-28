@@ -1,4 +1,4 @@
-# jventura1738-portfolio
+# justinventura.tech
 Web Portfolio
 
 ### Technologies used:
