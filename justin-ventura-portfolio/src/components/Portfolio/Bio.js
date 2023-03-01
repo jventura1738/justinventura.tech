@@ -46,27 +46,27 @@ function Bio({ emphasis }) {
               <div className="grid grid-cols-5 mt-10">
                 <img
                   src={amazonTransparent}
-                  className="col-span-1 h-24 w-32 my-3 justify-center"
+                  className="col-span-1 h-24 w-32 my-3 justify-center object-contain"
                   alt="logo"
                 />
                 <img
                   src={cmuTransparent}
-                  className="col-span-1 h-24 w-24 ml-4 my-3 justify-center"
+                  className="col-span-1 h-24 w-24 ml-4 my-3 justify-center object-contain"
                   alt="logo"
                 />
                 <img
                   src={googleTransparent}
-                  className="col-span-1 h-24 w-24 my-3 justify-center"
+                  className="col-span-1 h-24 w-24 my-3 justify-center object-contain"
                   alt="logo"
                 />
                 <img
                   src={metaTransparent}
-                  className="col-span-1 h-24 w-24 mr-4 my-3 justify-center"
+                  className="col-span-1 h-24 w-24 mr-4 my-3 justify-center object-contain"
                   alt="logo"
                 />
                 <img
                   src={umdTransparent}
-                  className="bg-white rounded-full col-span-1 h-24 w-24 ml-4 my-3 justify-center"
+                  className="bg-white rounded-full col-span-1 h-24 w-24 ml-4 my-3 justify-center object-contain"
                   alt="logo"
                 />
               </div>
